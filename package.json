@@ -1,0 +1,74 @@
+{
+  "homepage": "",
+  "name": "magic cylinder",
+  "version": "1.0.0",
+  "description": "Fun Project to pass time while the internet in my shitty country is blocked",
+  "main": "./src/index.jsx",
+  "scripts": {
+    "start": "cross-env HOST=0.0.0.0 react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint src --ext .js,.jsx --format stylish",
+    "lint:fix": "eslint src --ext .js,.jsx --format stylish --fix",
+    "act": "act --env-file .env.act --quiet",
+    "check": "npm run format:check && npm run test"
+  },
+  "author": {
+    "name": "Ali Sadeghi",
+    "url": "https://github.com/Ali-Sdg90"
+  },
+  "contributors": [
+    {
+      "name": "Ali Sadeghi",
+      "url": "https://github.com/Ali-Sdg90"
+    }
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.83.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@commitlint/cli": "^17.6.0",
+    "@commitlint/config-conventional": "^17.6.0",
+    "@eslint/js": "^9.35.0",
+    "babel-jest": "^29.7.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "publishConfig": {
+    "branch": "gh-pages"
+  }
+}
